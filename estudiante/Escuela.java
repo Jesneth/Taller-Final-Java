@@ -62,7 +62,31 @@ public class Escuela {
 
     }
 
-    public void actualizar
+    public void eliminarEstudiante(int identificacion){
+
+        for(Estudiante alumno:estudiantes){
+            if(alumno.getNumeroIdentificacion() == identificacion){
+                estudiantes.remove(alumno);
+                System.out.println("El estudiante ha sido eliminado");
+            }
+        }
+
+    }
+
+    public void actualizarEstudiante(int identificacion,String nuevoNombre, double nuevaCalificacion){
+
+        for(Estudiante alumno:estudiantes){
+            if(alumno.getNumeroIdentificacion() == identificacion){
+                estudiantes.remove(alumno);
+                
+                estudiantes.add(alumno);
+                System.out.println("El estudiante ha sido actualizado");
+            }
+        }
+
+    }
+
+
 
 
 
